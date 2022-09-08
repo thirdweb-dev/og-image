@@ -35,7 +35,7 @@ export default async function screenshot(url: string) {
   const page = await browser.newPage();
   // og image is supposed to be 1.9:1 (1200x630)
   // twitter image is supposed to be 2:1 (1200x600), but works fine with 1200x630, too
-  await page.setViewport({ width: 1200, height: 630, deviceScaleFactor: 2 });
+  await page.setViewport({ width: 1200, height: 630, deviceScaleFactor: 1 });
 
   await page.goto(url, { waitUntil: "networkidle2" });
 
